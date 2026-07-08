@@ -13,10 +13,9 @@
 </head>
 
 
-<body class="home">
+<body>
 
 
-<!-- Hintergrundbild -->
 <div class="background-image"></div>
 
 
@@ -37,47 +36,140 @@ DEIN NAME
 Projekt1
 </a>
 
-
 <a href="projekt.html?name=Projekt2" class="project">
 Projekt2
 </a>
-
 
 <a href="projekt.html?name=Projekt3" class="project">
 Projekt3
 </a>
 
-
 <a href="projekt.html?name=Projekt4" class="project">
 Projekt4
 </a>
-
 
 <a href="projekt.html?name=Projekt5" class="project">
 Projekt5
 </a>
 
-
 <a href="projekt.html?name=Projekt6" class="project">
 Projekt6
 </a>
 
-
 <a href="projekt.html?name=Projekt7" class="project">
 Projekt7
 </a>
-
 
 <a href="projekt.html?name=Projekt8" class="project">
 Projekt8
 </a>
 
 
+<a href="cv.html" class="project cv-link">
+CV
+</a>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="de">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projekt</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="gallery-body">
+
+
+<header>
+
+<h1 class="artist-name">
+DEIN NAME
+</h1>
+
+
+<a href="index.html" class="back">
+← zurück
+</a>
+
+
+</header>
+
+
+
+
+<main class="gallery-page">
+
+
+<h2 id="project-title" class="gallery-title">
+Projekt
+</h2>
+
+
+
+<section class="gallery">
+
+
+<img src="https://via.placeholder.com/1200x800">
+<img src="https://via.placeholder.com/1200x800">
+<img src="https://via.placeholder.com/1200x800">
+<img src="https://via.placeholder.com/1200x800">
+
+
+</section>
+
+
 </main>
 
 
 
-<script src="script.js"></script>
+<script>
+
+
+const params =
+new URLSearchParams(window.location.search);
+
+
+const name =
+params.get("name");
+
+
+if(name){
+
+document.getElementById("project-title").innerHTML=name;
+
+document.title=name;
+
+}
+
+
+</script>
+
 
 
 </body>
@@ -85,31 +177,100 @@ Projekt8
 </html>
 
 
-/* =====================================
-   Grundlayout
-===================================== */
 
 
-* {
 
+
+
+<!DOCTYPE html>
+
+<html lang="de">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CV | DEIN NAME</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<body class="cv-page">
+
+
+<h1 class="artist-name">
+DEIN NAME
+</h1>
+
+
+<a href="index.html" class="back">
+← zurück
+</a>
+
+
+
+<main class="cv-content">
+
+
+<h2>
+CV
+</h2>
+
+
+<p>
+2026<br>
+Ausstellung Titel
+</p>
+
+
+<p>
+2024–2026<br>
+Studium / Projekte
+</p>
+
+
+<p>
+2020–2024<br>
+Muthesius Kunsthochschule Kiel
+</p>
+
+
+</main>
+
+
+</body>
+
+
+</html>
+
+
+
+console.log("Website geladen");
+
+{
 box-sizing:border-box;
-
 }
 
 
-
-body {
+body{
 
 margin:0;
-
-background:black;
-
-color:white;
 
 font-family:
 Helvetica,
 Arial,
 sans-serif;
+
+background:white;
+
+color:black;
 
 overflow:hidden;
 
@@ -117,19 +278,13 @@ overflow:hidden;
 
 
 
-/* =====================================
-   Hintergrundbild
-===================================== */
-
-
-.background-image {
-
+.background-image{
 
 position:fixed;
 
 inset:0;
 
-z-index:-2;
+z-index:-1;
 
 
 background-image:url(
@@ -141,19 +296,11 @@ background-size:cover;
 
 background-position:center;
 
-
 }
 
 
 
-/*
-dezente Abdunklung
-damit Text lesbar bleibt
-*/
-
-
-.background-image::after {
-
+.background-image::after{
 
 content:"";
 
@@ -161,132 +308,80 @@ position:absolute;
 
 inset:0;
 
-
-background:
-rgba(0,0,0,0.35);
-
+background:rgba(0,0,0,0.35);
 
 }
 
 
 
-/* =====================================
-   Künstlername
-===================================== */
+/* Künstlername */
 
 
-.artist-name {
-
+.artist-name{
 
 position:fixed;
-
 
 top:30px;
 
 left:40px;
 
-
 font-size:32px;
-
 
 font-weight:400;
 
+color:white;
 
-letter-spacing:-1px;
-
-
-z-index:20;
-
+z-index:10;
 
 }
 
 
 
-/* =====================================
-   Projekte
-===================================== */
+/* Startseite */
 
 
-.project-container {
-
-
-padding-top:120px;
-
+.project-container{
 
 height:100vh;
-
 
 display:flex;
 
 flex-direction:column;
 
-
 justify-content:center;
 
-
 overflow:hidden;
-
 
 }
 
 
 
-
-.project {
-
-
-display:block;
-
-
-width:max-content;
-
-
-white-space:nowrap;
-
+.project{
 
 font-size:
 clamp(45px,8vw,120px);
 
-
 font-weight:300;
-
-
-text-decoration:none;
-
 
 color:white;
 
+text-decoration:none;
+
+white-space:nowrap;
+
+width:max-content;
 
 margin:15px 0;
 
 
 animation:
-
-moveText
-
-linear
-
-infinite;
-
-
-
-}
-
-
-/* unterschiedliche Bewegungen */
-
-
-.project:nth-child(1){
-
-animation-duration:32s;
+move 35s linear infinite;
 
 }
 
 
 
-.project:nth-child(2){
-
-animation-duration:40s;
+.project:nth-child(even){
 
 animation-direction:reverse;
 
@@ -294,75 +389,27 @@ animation-direction:reverse;
 
 
 
-.project:nth-child(3){
-
-animation-duration:28s;
-
-}
-
-
-
-.project:nth-child(4){
+.project:nth-child(3n){
 
 animation-duration:45s;
 
-animation-direction:reverse;
-
 }
 
 
 
-.project:nth-child(5){
-
-animation-duration:35s;
-
-}
-
-
-
-.project:nth-child(6){
-
-animation-duration:50s;
-
-animation-direction:reverse;
-
-}
-
-
-
-.project:nth-child(7){
-
-animation-duration:30s;
-
-}
-
-
-
-.project:nth-child(8){
-
-animation-duration:42s;
-
-animation-direction:reverse;
-
-}
-
-
-
-
-
-@keyframes moveText{
+@keyframes move{
 
 
 from{
 
-transform:translateX(-120%);
+transform:translateX(-100%);
 
 }
 
 
 to{
 
-transform:translateX(120vw);
+transform:translateX(100vw);
 
 }
 
@@ -371,148 +418,139 @@ transform:translateX(120vw);
 
 
 
-/* =====================================
-   Galerie Seiten
-===================================== */
+/* Galerie */
 
 
-.gallery-page {
-
-
-padding-top:120px;
-
+.gallery-body{
 
 background:white;
 
-
-color:black;
-
-
-min-height:100vh;
-
+overflow:auto;
 
 }
 
 
 
-.back {
+.gallery-page{
 
-
-position:fixed;
-
-
-top:35px;
-
-
-right:40px;
-
-
-color:white;
-
-
-text-decoration:none;
-
-
-z-index:20;
-
+padding-top:120px;
 
 }
 
 
 
-.gallery-title {
-
-
-margin-left:40px;
-
+.gallery-title{
 
 font-size:60px;
 
-
 font-weight:300;
 
+margin-left:40px;
 
 }
 
 
 
-.gallery {
-
+.gallery{
 
 display:grid;
 
-
 grid-template-columns:
-
 repeat(auto-fit,minmax(300px,1fr));
-
 
 gap:40px;
 
-
 padding:40px;
-
 
 }
 
 
 
-.gallery img {
-
+.gallery img{
 
 width:100%;
 
+}
 
-display:block;
 
+
+/* zurück */
+
+
+.back{
+
+position:fixed;
+
+right:40px;
+
+top:35px;
+
+color:white;
+
+text-decoration:none;
+
+z-index:20;
 
 }
 
 
 
-/* =====================================
-   Mobile
-===================================== */
+/* CV */
+
+
+.cv-content{
+
+padding:150px 40px;
+
+font-size:24px;
+
+line-height:1.8;
+
+}
+
+
+
+.cv-content h2{
+
+font-size:60px;
+
+font-weight:300;
+
+}
+
+
+
+/* Mobile */
 
 
 @media(max-width:700px){
 
 
-
-.artist-name {
-
+.artist-name{
 
 top:20px;
 
-
 left:20px;
-
 
 font-size:24px;
 
-
 }
 
 
-
-.project-container {
-
-
-padding-top:80px;
-
-
-}
-
-
-
-.project {
-
+.project{
 
 font-size:45px;
 
-
 }
 
+
+.gallery-title{
+
+margin-left:20px;
+
+font-size:40px;
+
+}
 
 
 }
