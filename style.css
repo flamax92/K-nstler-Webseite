@@ -1,19 +1,58 @@
-/* Grundlayout */
+*{
+box-sizing:border-box;
+}
 
-body {
+
+body{
 
 margin:0;
-
-background:white;
-
-color:black;
 
 font-family:
 Helvetica,
 Arial,
 sans-serif;
 
-overflow-x:hidden;
+background:white;
+
+color:black;
+
+overflow:hidden;
+
+}
+
+
+
+.background-image{
+
+position:fixed;
+
+inset:0;
+
+z-index:-1;
+
+
+background-image:url(
+"https://images.unsplash.com/photo-1549490349-8643362247b5"
+);
+
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+.background-image::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,0.35);
 
 }
 
@@ -21,7 +60,8 @@ overflow-x:hidden;
 
 /* Künstlername */
 
-.artist-name {
+
+.artist-name{
 
 position:fixed;
 
@@ -33,7 +73,7 @@ font-size:32px;
 
 font-weight:400;
 
-letter-spacing:-1px;
+color:white;
 
 z-index:10;
 
@@ -41,46 +81,49 @@ z-index:10;
 
 
 
-/* Projektliste */
+/* Startseite */
 
-.project-container {
 
-padding-top:120px;
+.project-container{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+overflow:hidden;
 
 }
 
 
 
-.project {
+.project{
 
-
-display:block;
-
-font-size:clamp(40px,8vw,120px);
+font-size:
+clamp(45px,8vw,120px);
 
 font-weight:300;
 
-text-decoration:none;
+color:white;
 
-color:black;
+text-decoration:none;
 
 white-space:nowrap;
 
-margin:20px 0;
+width:max-content;
+
+margin:15px 0;
 
 
 animation:
-moveText
-18s linear infinite;
-
+move 35s linear infinite;
 
 }
 
 
-
-/*
-Jede zweite Zeile bewegt sich andersherum
-*/
 
 .project:nth-child(even){
 
@@ -90,49 +133,49 @@ animation-direction:reverse;
 
 
 
-/*
-Animation horizontal
-*/
+.project:nth-child(3n){
 
-@keyframes moveText {
-
-
-from {
-
-transform:translateX(-20%);
-
-}
-
-
-to {
-
-transform:translateX(100%);
-
-}
-
+animation-duration:45s;
 
 }
 
 
 
-/*
-Maus stoppt Bewegung
-*/
+@keyframes move{
 
-.project:hover {
 
-animation-play-state:paused;
+from{
+
+transform:translateX(-100%);
+
+}
+
+
+to{
+
+transform:translateX(100vw);
+
+}
+
 
 }
 
 
 
-/*
-Projekt Galerie
-*/
+/* Galerie */
 
 
-.gallery-page {
+.gallery-body{
+
+background:white;
+
+overflow:auto;
+
+}
+
+
+
+.gallery-page{
 
 padding-top:120px;
 
@@ -140,25 +183,7 @@ padding-top:120px;
 
 
 
-.back {
-
-position:fixed;
-
-top:35px;
-
-right:40px;
-
-text-decoration:none;
-
-color:black;
-
-font-size:16px;
-
-}
-
-
-
-.gallery-title {
+.gallery-title{
 
 font-size:60px;
 
@@ -170,12 +195,11 @@ margin-left:40px;
 
 
 
-.gallery {
+.gallery{
 
 display:grid;
 
 grid-template-columns:
-
 repeat(auto-fit,minmax(300px,1fr));
 
 gap:40px;
@@ -186,62 +210,85 @@ padding:40px;
 
 
 
-.gallery img {
+.gallery img{
 
 width:100%;
-
-height:auto;
-
-display:block;
 
 }
 
 
 
-/*
-Mobile Anpassung
-*/
+/* zurück */
+
+
+.back{
+
+position:fixed;
+
+right:40px;
+
+top:35px;
+
+color:white;
+
+text-decoration:none;
+
+z-index:20;
+
+}
+
+
+
+/* CV */
+
+
+.cv-content{
+
+padding:150px 40px;
+
+font-size:24px;
+
+line-height:1.8;
+
+}
+
+
+
+.cv-content h2{
+
+font-size:60px;
+
+font-weight:300;
+
+}
+
+
+
+/* Mobile */
 
 
 @media(max-width:700px){
 
 
-.artist-name {
-
-left:20px;
+.artist-name{
 
 top:20px;
+
+left:20px;
 
 font-size:24px;
 
 }
 
 
-.project-container {
-
-padding-top:90px;
-
-}
-
-
-.project {
+.project{
 
 font-size:45px;
 
-margin:30px 0;
-
 }
 
 
-
-.gallery {
-
-padding:20px;
-
-}
-
-
-.gallery-title {
+.gallery-title{
 
 margin-left:20px;
 
