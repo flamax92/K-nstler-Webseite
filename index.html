@@ -2,17 +2,22 @@
 <html lang="de">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dein Name | Künstler</title>
+<title>DEIN NAME | Künstler</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 
-<body>
+<body class="home">
+
+
+<!-- Hintergrundbild -->
+<div class="background-image"></div>
 
 
 <header>
@@ -78,56 +83,152 @@ Projekt8
 </body>
 
 </html>
-/* Grundlayout */
+
+
+/* =====================================
+   Grundlayout
+===================================== */
+
+
+* {
+
+box-sizing:border-box;
+
+}
+
+
 
 body {
 
 margin:0;
 
-background:white;
+background:black;
 
-color:black;
+color:white;
 
 font-family:
 Helvetica,
 Arial,
 sans-serif;
 
-overflow-x:hidden;
+overflow:hidden;
 
 }
 
 
 
-/* Künstlername */
+/* =====================================
+   Hintergrundbild
+===================================== */
+
+
+.background-image {
+
+
+position:fixed;
+
+inset:0;
+
+z-index:-2;
+
+
+background-image:url(
+"https://images.unsplash.com/photo-1549490349-8643362247b5"
+);
+
+
+background-size:cover;
+
+background-position:center;
+
+
+}
+
+
+
+/*
+dezente Abdunklung
+damit Text lesbar bleibt
+*/
+
+
+.background-image::after {
+
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+
+background:
+rgba(0,0,0,0.35);
+
+
+}
+
+
+
+/* =====================================
+   Künstlername
+===================================== */
+
 
 .artist-name {
 
+
 position:fixed;
+
 
 top:30px;
 
 left:40px;
 
+
 font-size:32px;
+
 
 font-weight:400;
 
+
 letter-spacing:-1px;
 
-z-index:10;
+
+z-index:20;
+
 
 }
 
 
 
-/* Projektliste */
+/* =====================================
+   Projekte
+===================================== */
+
 
 .project-container {
 
+
 padding-top:120px;
 
+
+height:100vh;
+
+
+display:flex;
+
+flex-direction:column;
+
+
+justify-content:center;
+
+
+overflow:hidden;
+
+
 }
+
 
 
 
@@ -136,33 +237,56 @@ padding-top:120px;
 
 display:block;
 
-font-size:clamp(40px,8vw,120px);
 
-font-weight:300;
+width:max-content;
 
-text-decoration:none;
-
-color:black;
 
 white-space:nowrap;
 
-margin:20px 0;
+
+font-size:
+clamp(45px,8vw,120px);
+
+
+font-weight:300;
+
+
+text-decoration:none;
+
+
+color:white;
+
+
+margin:15px 0;
 
 
 animation:
+
 moveText
-18s linear infinite;
+
+linear
+
+infinite;
+
 
 
 }
 
 
+/* unterschiedliche Bewegungen */
 
-/*
-Jede zweite Zeile bewegt sich andersherum
-*/
 
-.project:nth-child(even){
+.project:nth-child(1){
+
+animation-duration:32s;
+
+}
+
+
+
+.project:nth-child(2){
+
+animation-duration:40s;
 
 animation-direction:reverse;
 
@@ -170,51 +294,102 @@ animation-direction:reverse;
 
 
 
-/*
-Animation horizontal
-*/
+.project:nth-child(3){
 
-@keyframes moveText {
-
-
-from {
-
-transform:translateX(-20%);
-
-}
-
-
-to {
-
-transform:translateX(100%);
-
-}
-
+animation-duration:28s;
 
 }
 
 
 
-/*
-Maus stoppt Bewegung
-*/
+.project:nth-child(4){
 
-.project:hover {
+animation-duration:45s;
 
-animation-play-state:paused;
+animation-direction:reverse;
 
 }
 
 
 
-/*
-Projekt Galerie
-*/
+.project:nth-child(5){
+
+animation-duration:35s;
+
+}
+
+
+
+.project:nth-child(6){
+
+animation-duration:50s;
+
+animation-direction:reverse;
+
+}
+
+
+
+.project:nth-child(7){
+
+animation-duration:30s;
+
+}
+
+
+
+.project:nth-child(8){
+
+animation-duration:42s;
+
+animation-direction:reverse;
+
+}
+
+
+
+
+
+@keyframes moveText{
+
+
+from{
+
+transform:translateX(-120%);
+
+}
+
+
+to{
+
+transform:translateX(120vw);
+
+}
+
+
+}
+
+
+
+/* =====================================
+   Galerie Seiten
+===================================== */
 
 
 .gallery-page {
 
+
 padding-top:120px;
+
+
+background:white;
+
+
+color:black;
+
+
+min-height:100vh;
+
 
 }
 
@@ -222,17 +397,24 @@ padding-top:120px;
 
 .back {
 
+
 position:fixed;
+
 
 top:35px;
 
+
 right:40px;
+
+
+color:white;
+
 
 text-decoration:none;
 
-color:black;
 
-font-size:16px;
+z-index:20;
+
 
 }
 
@@ -240,11 +422,15 @@ font-size:16px;
 
 .gallery-title {
 
+
+margin-left:40px;
+
+
 font-size:60px;
+
 
 font-weight:300;
 
-margin-left:40px;
 
 }
 
@@ -252,15 +438,20 @@ margin-left:40px;
 
 .gallery {
 
+
 display:grid;
+
 
 grid-template-columns:
 
 repeat(auto-fit,minmax(300px,1fr));
 
+
 gap:40px;
 
+
 padding:40px;
+
 
 }
 
@@ -268,66 +459,60 @@ padding:40px;
 
 .gallery img {
 
+
 width:100%;
 
-height:auto;
 
 display:block;
+
 
 }
 
 
 
-/*
-Mobile Anpassung
-*/
+/* =====================================
+   Mobile
+===================================== */
 
 
 @media(max-width:700px){
 
 
+
 .artist-name {
 
-left:20px;
 
 top:20px;
 
+
+left:20px;
+
+
 font-size:24px;
 
+
 }
+
 
 
 .project-container {
 
-padding-top:90px;
+
+padding-top:80px;
+
 
 }
+
 
 
 .project {
 
+
 font-size:45px;
 
-margin:30px 0;
 
 }
 
-
-
-.gallery {
-
-padding:20px;
-
-}
-
-
-.gallery-title {
-
-margin-left:20px;
-
-font-size:40px;
-
-}
 
 
 }
