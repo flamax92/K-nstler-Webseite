@@ -8,254 +8,16 @@
 
 <title>DEIN NAME | Künstler</title>
 
-<link rel="stylesheet" href="style.css">
 
-</head>
+<style>
 
-
-<body>
-
-
-<div class="background-image"></div>
-
-
-<header>
-
-<h1 class="artist-name">
-DEIN NAME
-</h1>
-
-</header>
-
-
-
-<main class="project-container">
-
-
-<a href="projekt.html?name=Projekt1" class="project">
-Projekt1
-</a>
-
-<a href="projekt.html?name=Projekt2" class="project">
-Projekt2
-</a>
-
-<a href="projekt.html?name=Projekt3" class="project">
-Projekt3
-</a>
-
-<a href="projekt.html?name=Projekt4" class="project">
-Projekt4
-</a>
-
-<a href="projekt.html?name=Projekt5" class="project">
-Projekt5
-</a>
-
-<a href="projekt.html?name=Projekt6" class="project">
-Projekt6
-</a>
-
-<a href="projekt.html?name=Projekt7" class="project">
-Projekt7
-</a>
-
-<a href="projekt.html?name=Projekt8" class="project">
-Projekt8
-</a>
-
-
-<a href="cv.html" class="project cv-link">
-CV
-</a>
-
-
-</main>
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-
-<html lang="de">
-
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Projekt</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body class="gallery-body">
-
-
-<header>
-
-<h1 class="artist-name">
-DEIN NAME
-</h1>
-
-
-<a href="index.html" class="back">
-← zurück
-</a>
-
-
-</header>
-
-
-
-
-<main class="gallery-page">
-
-
-<h2 id="project-title" class="gallery-title">
-Projekt
-</h2>
-
-
-
-<section class="gallery">
-
-
-<img src="https://via.placeholder.com/1200x800">
-<img src="https://via.placeholder.com/1200x800">
-<img src="https://via.placeholder.com/1200x800">
-<img src="https://via.placeholder.com/1200x800">
-
-
-</section>
-
-
-</main>
-
-
-
-<script>
-
-
-const params =
-new URLSearchParams(window.location.search);
-
-
-const name =
-params.get("name");
-
-
-if(name){
-
-document.getElementById("project-title").innerHTML=name;
-
-document.title=name;
-
+*{
+box-sizing:border-box;
 }
 
 
-</script>
-
-
-
-</body>
-
-</html>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-
-<html lang="de">
-
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CV | DEIN NAME</title>
-
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-
-<body class="cv-page">
-
-
-<h1 class="artist-name">
-DEIN NAME
-</h1>
-
-
-<a href="index.html" class="back">
-← zurück
-</a>
-
-
-
-<main class="cv-content">
-
-
-<h2>
-CV
-</h2>
-
-
-<p>
-2026<br>
-Ausstellung Titel
-</p>
-
-
-<p>
-2024–2026<br>
-Studium / Projekte
-</p>
-
-
-<p>
-2020–2024<br>
-Muthesius Kunsthochschule Kiel
-</p>
-
-
-</main>
-
-
-</body>
-
-
-</html>
-
-
-
-console.log("Website geladen");
-
-{
-box-sizing:border-box;
+html{
+scroll-behavior:smooth;
 }
 
 
@@ -268,15 +30,16 @@ Helvetica,
 Arial,
 sans-serif;
 
-background:white;
+color:white;
 
-color:black;
+background:black;
 
-overflow:hidden;
+overflow-x:hidden;
 
 }
 
 
+/* Hintergrund */
 
 .background-image{
 
@@ -284,20 +47,17 @@ position:fixed;
 
 inset:0;
 
-z-index:-1;
-
+z-index:-2;
 
 background-image:url(
 "https://images.unsplash.com/photo-1549490349-8643362247b5"
 );
-
 
 background-size:cover;
 
 background-position:center;
 
 }
-
 
 
 .background-image::after{
@@ -308,14 +68,13 @@ position:absolute;
 
 inset:0;
 
-background:rgba(0,0,0,0.35);
+background:rgba(0,0,0,0.45);
 
 }
 
 
 
 /* Künstlername */
-
 
 .artist-name{
 
@@ -329,9 +88,36 @@ font-size:32px;
 
 font-weight:400;
 
+z-index:20;
+
+}
+
+
+
+/* Navigation */
+
+.navigation{
+
+position:fixed;
+
+top:35px;
+
+right:40px;
+
+z-index:20;
+
+}
+
+
+.navigation a{
+
 color:white;
 
-z-index:10;
+text-decoration:none;
+
+margin-left:25px;
+
+font-size:16px;
 
 }
 
@@ -340,9 +126,15 @@ z-index:10;
 /* Startseite */
 
 
-.project-container{
+.page{
 
-height:100vh;
+min-height:100vh;
+
+}
+
+
+
+#home{
 
 display:flex;
 
@@ -358,6 +150,12 @@ overflow:hidden;
 
 .project{
 
+display:block;
+
+width:max-content;
+
+white-space:nowrap;
+
 font-size:
 clamp(45px,8vw,120px);
 
@@ -367,12 +165,7 @@ color:white;
 
 text-decoration:none;
 
-white-space:nowrap;
-
-width:max-content;
-
 margin:15px 0;
-
 
 animation:
 move 35s linear infinite;
@@ -380,13 +173,11 @@ move 35s linear infinite;
 }
 
 
-
 .project:nth-child(even){
 
 animation-direction:reverse;
 
 }
-
 
 
 .project:nth-child(3n){
@@ -399,44 +190,39 @@ animation-duration:45s;
 
 @keyframes move{
 
-
 from{
 
-transform:translateX(-100%);
+transform:translateX(-120%);
 
 }
 
 
 to{
 
-transform:translateX(100vw);
+transform:translateX(120vw);
+
+}
 
 }
 
 
-}
 
-
-
-/* Galerie */
-
-
-.gallery-body{
-
-background:white;
-
-overflow:auto;
-
-}
-
+/* Projektseiten */
 
 
 .gallery-page{
 
+background:white;
+
+color:black;
+
 padding-top:120px;
 
-}
+min-height:100vh;
 
+display:none;
+
+}
 
 
 .gallery-title{
@@ -470,6 +256,37 @@ padding:40px;
 
 width:100%;
 
+display:block;
+
+}
+
+
+
+/* CV */
+
+
+.cv-page{
+
+background:white;
+
+color:black;
+
+padding:150px 40px;
+
+display:none;
+
+min-height:100vh;
+
+}
+
+
+
+.cv-page h2{
+
+font-size:60px;
+
+font-weight:300;
+
 }
 
 
@@ -479,42 +296,11 @@ width:100%;
 
 .back{
 
-position:fixed;
-
-right:40px;
-
-top:35px;
-
-color:white;
+color:black;
 
 text-decoration:none;
 
-z-index:20;
-
-}
-
-
-
-/* CV */
-
-
-.cv-content{
-
-padding:150px 40px;
-
-font-size:24px;
-
-line-height:1.8;
-
-}
-
-
-
-.cv-content h2{
-
-font-size:60px;
-
-font-weight:300;
+font-size:18px;
 
 }
 
@@ -528,11 +314,20 @@ font-weight:300;
 
 .artist-name{
 
-top:20px;
-
 left:20px;
 
+top:20px;
+
 font-size:24px;
+
+}
+
+
+.navigation{
+
+right:20px;
+
+top:25px;
 
 }
 
@@ -546,11 +341,271 @@ font-size:45px;
 
 .gallery-title{
 
-margin-left:20px;
-
 font-size:40px;
 
+margin-left:20px;
+
 }
 
 
 }
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="background-image"></div>
+
+
+<h1 class="artist-name">
+DEIN NAME
+</h1>
+
+
+
+<div class="navigation">
+
+<a href="#home">
+Home
+</a>
+
+<a href="#cv">
+CV
+</a>
+
+</div>
+
+
+
+
+<!-- STARTSEITE -->
+
+
+<section id="home" class="page">
+
+
+<a href="#projekt1" class="project">
+Projekt1
+</a>
+
+
+<a href="#projekt2" class="project">
+Projekt2
+</a>
+
+
+<a href="#projekt3" class="project">
+Projekt3
+</a>
+
+
+<a href="#projekt4" class="project">
+Projekt4
+</a>
+
+
+<a href="#projekt5" class="project">
+Projekt5
+</a>
+
+
+<a href="#projekt6" class="project">
+Projekt6
+</a>
+
+
+<a href="#projekt7" class="project">
+Projekt7
+</a>
+
+
+<a href="#projekt8" class="project">
+Projekt8
+</a>
+
+
+</section>
+
+
+
+
+
+<!-- PROJEKT GALERIEN -->
+
+
+<section id="projekt1" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt1
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+<img src="https://via.placeholder.com/1200">
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+
+<section id="projekt2" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt2
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+<section id="projekt3" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt3
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+
+<section id="projekt4" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt4
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+<section id="projekt5" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt5
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+<section id="projekt6" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt6
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+<section id="projekt7" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt7
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+
+<section id="projekt8" class="gallery-page">
+
+<h2 class="gallery-title">
+Projekt8
+</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/1200">
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="cv" class="cv-page">
+
+
+<h2>
+CV
+</h2>
+
+
+<p>
+2026<br>
+Ausstellung Titel
+</p>
+
+
+<p>
+2024–2026<br>
+Künstlerische Projekte
+</p>
+
+
+<p>
+2020–2024<br>
+Studium Muthesius Kunsthochschule Kiel
+</p>
+
+
+
+</section>
+
+
+
+</body>
+
+</html>
