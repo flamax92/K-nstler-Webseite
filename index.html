@@ -8,353 +8,9 @@
 
 <title>DEIN NAME | Künstler</title>
 
-
-<style>
-
-*{
-box-sizing:border-box;
-}
-
-
-html{
-scroll-behavior:smooth;
-}
-
-
-body{
-
-margin:0;
-
-font-family:
-Helvetica,
-Arial,
-sans-serif;
-
-color:white;
-
-background:black;
-
-overflow-x:hidden;
-
-}
-
-
-/* Hintergrund */
-
-.background-image{
-
-position:fixed;
-
-inset:0;
-
-z-index:-2;
-
-background-image:url(
-"https://images.unsplash.com/photo-1549490349-8643362247b5"
-);
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-
-.background-image::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:rgba(0,0,0,0.45);
-
-}
-
-
-
-/* Künstlername */
-
-.artist-name{
-
-position:fixed;
-
-top:30px;
-
-left:40px;
-
-font-size:32px;
-
-font-weight:400;
-
-z-index:20;
-
-}
-
-
-
-/* Navigation */
-
-.navigation{
-
-position:fixed;
-
-top:35px;
-
-right:40px;
-
-z-index:20;
-
-}
-
-
-.navigation a{
-
-color:white;
-
-text-decoration:none;
-
-margin-left:25px;
-
-font-size:16px;
-
-}
-
-
-
-/* Startseite */
-
-
-.page{
-
-min-height:100vh;
-
-}
-
-
-
-#home{
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-overflow:hidden;
-
-}
-
-
-
-.project{
-
-display:block;
-
-width:max-content;
-
-white-space:nowrap;
-
-font-size:
-clamp(45px,8vw,120px);
-
-font-weight:300;
-
-color:white;
-
-text-decoration:none;
-
-margin:15px 0;
-
-animation:
-move 35s linear infinite;
-
-}
-
-
-.project:nth-child(even){
-
-animation-direction:reverse;
-
-}
-
-
-.project:nth-child(3n){
-
-animation-duration:45s;
-
-}
-
-
-
-@keyframes move{
-
-from{
-
-transform:translateX(-120%);
-
-}
-
-
-to{
-
-transform:translateX(120vw);
-
-}
-
-}
-
-
-
-/* Projektseiten */
-
-
-.gallery-page{
-
-background:white;
-
-color:black;
-
-padding-top:120px;
-
-min-height:100vh;
-
-display:none;
-
-}
-
-
-.gallery-title{
-
-font-size:60px;
-
-font-weight:300;
-
-margin-left:40px;
-
-}
-
-
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
-
-gap:40px;
-
-padding:40px;
-
-}
-
-
-
-.gallery img{
-
-width:100%;
-
-display:block;
-
-}
-
-
-
-/* CV */
-
-
-.cv-page{
-
-background:white;
-
-color:black;
-
-padding:150px 40px;
-
-display:none;
-
-min-height:100vh;
-
-}
-
-
-
-.cv-page h2{
-
-font-size:60px;
-
-font-weight:300;
-
-}
-
-
-
-/* zurück */
-
-
-.back{
-
-color:black;
-
-text-decoration:none;
-
-font-size:18px;
-
-}
-
-
-
-/* Mobile */
-
-
-@media(max-width:700px){
-
-
-.artist-name{
-
-left:20px;
-
-top:20px;
-
-font-size:24px;
-
-}
-
-
-.navigation{
-
-right:20px;
-
-top:25px;
-
-}
-
-
-.project{
-
-font-size:45px;
-
-}
-
-
-.gallery-title{
-
-font-size:40px;
-
-margin-left:20px;
-
-}
-
-
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 
 
 <body>
@@ -363,248 +19,61 @@ margin-left:20px;
 <div class="background-image"></div>
 
 
+<header>
+
 <h1 class="artist-name">
 DEIN NAME
 </h1>
 
-
-
-<div class="navigation">
-
-<a href="#home">
-Home
-</a>
-
-<a href="#cv">
-CV
-</a>
-
-</div>
+</header>
 
 
 
-
-<!-- STARTSEITE -->
-
-
-<section id="home" class="page">
+<main class="project-container">
 
 
-<a href="#projekt1" class="project">
+<a href="projekt.html?name=Projekt1" class="project">
 Projekt1
 </a>
 
-
-<a href="#projekt2" class="project">
+<a href="projekt.html?name=Projekt2" class="project">
 Projekt2
 </a>
 
-
-<a href="#projekt3" class="project">
+<a href="projekt.html?name=Projekt3" class="project">
 Projekt3
 </a>
 
-
-<a href="#projekt4" class="project">
+<a href="projekt.html?name=Projekt4" class="project">
 Projekt4
 </a>
 
-
-<a href="#projekt5" class="project">
+<a href="projekt.html?name=Projekt5" class="project">
 Projekt5
 </a>
 
-
-<a href="#projekt6" class="project">
+<a href="projekt.html?name=Projekt6" class="project">
 Projekt6
 </a>
 
-
-<a href="#projekt7" class="project">
+<a href="projekt.html?name=Projekt7" class="project">
 Projekt7
 </a>
 
-
-<a href="#projekt8" class="project">
+<a href="projekt.html?name=Projekt8" class="project">
 Projekt8
 </a>
 
 
-</section>
-
-
-
-
-
-<!-- PROJEKT GALERIEN -->
-
-
-<section id="projekt1" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt1
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-<img src="https://via.placeholder.com/1200">
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-
-<section id="projekt2" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt2
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-<section id="projekt3" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt3
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-
-<section id="projekt4" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt4
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-<section id="projekt5" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt5
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-<section id="projekt6" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt6
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-<section id="projekt7" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt7
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-
-<section id="projekt8" class="gallery-page">
-
-<h2 class="gallery-title">
-Projekt8
-</h2>
-
-<div class="gallery">
-
-<img src="https://via.placeholder.com/1200">
-
-</div>
-
-</section>
-
-
-
-
-
-<section id="cv" class="cv-page">
-
-
-<h2>
+<a href="cv.html" class="project cv-link">
 CV
-</h2>
+</a>
 
 
-<p>
-2026<br>
-Ausstellung Titel
-</p>
+</main>
 
 
-<p>
-2024–2026<br>
-Künstlerische Projekte
-</p>
-
-
-<p>
-2020–2024<br>
-Studium Muthesius Kunsthochschule Kiel
-</p>
-
-
-
-</section>
-
-
+<script src="script.js"></script>
 
 </body>
 
