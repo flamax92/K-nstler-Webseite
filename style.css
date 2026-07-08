@@ -7,16 +7,15 @@ body{
 
 margin:0;
 
-font-family:
-Helvetica,
-Arial,
-sans-serif;
+font-family:Helvetica, Arial, sans-serif;
 
 background:white;
 
 color:black;
 
-overflow:hidden;
+overflow-x:hidden;
+
+overflow-y:auto;
 
 }
 
@@ -165,7 +164,15 @@ transform:translateX(100vw);
 /* =====================================
    Projektgalerie
 ===================================== */
+.gallery-body{
 
+background:white;
+
+overflow-x:hidden;
+
+overflow-y:auto;
+
+}
 .gallery{
 
 width:100%;
