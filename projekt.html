@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
 
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Projekt</title>
@@ -15,75 +12,145 @@
 
 </head>
 
-
 <body class="gallery-body">
-
 
 <header>
 
 <h1 class="artist-name">
-maximilian flachsenberg
+DEIN NAME
 </h1>
 
-
 <a href="index.html" class="back">
-← zurück
+← Back
 </a>
-
 
 </header>
 
-
-
-
 <main class="gallery-page">
 
-
-<h2 id="project-title" class="gallery-title">
+<h2 class="gallery-title" id="project-title">
 Projekt
 </h2>
 
-
-
-<section class="gallery">
-
-
-<img src="https://via.placeholder.com/1200x800">
-<img src="https://via.placeholder.com/1200x800">
-<img src="https://via.placeholder.com/1200x800">
-<img src="https://via.placeholder.com/1200x800">
-
-
-</section>
-
+<div class="gallery" id="gallery">
+</div>
 
 </main>
 
-
-
 <script>
 
+const params = new URLSearchParams(window.location.search);
 
-const params =
-new URLSearchParams(window.location.search);
+const slug = params.get("project");
 
+const projects = {
 
-const name =
-params.get("name");
+"dance-for-increasing-distances":{
 
+title:"Dance for Increasing Distances",
 
-if(name){
+images:[
 
-document.getElementById("project-title").innerHTML=name;
+"images/Bespiel1.jpg",
+"images/Bespiel1.jpg",
+"images/Bespiel1.jpg",
+"images/Bespiel1.jpg",
+"images/Bespiel1.jpg",
+]
 
-document.title=name;
+},
+
+"port-de-bras":{
+
+title:"Port de Bras",
+
+images:[
+
+]
+
+},
+
+"departure-of-the-funny-ones":{
+
+title:"Departure of the Funny Ones",
+
+images:[
+
+]
+
+},
+
+"something-to-dress-my-breath":{
+
+title:"Something to Dress My Breath",
+
+images:[
+
+]
+
+},
+
+"eingesessen":{
+
+title:"Eingesessen",
+
+images:[
+
+]
+
+},
+
+"love-artefacts":{
+
+title:"Love Artefacts",
+
+images:[
+
+]
+
+},
+
+"fare-well":{
+
+title:"Fare Well",
+
+images:[
+
+]
 
 }
 
+};
+
+const project = projects[slug];
+
+const gallery = document.getElementById("gallery");
+
+const title = document.getElementById("project-title");
+
+if(project){
+
+title.textContent = project.title;
+
+project.images.forEach(function(image){
+
+const img = document.createElement("img");
+
+img.src = image;
+
+img.alt = project.title;
+
+gallery.appendChild(img);
+
+});
+
+}else{
+
+title.textContent="Projekt nicht gefunden.";
+
+}
 
 </script>
-
-
 
 </body>
 
