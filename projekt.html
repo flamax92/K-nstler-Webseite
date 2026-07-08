@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projekt</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="gallery-body">
+
+
+<header>
+
+<h1 class="artist-name">
+DEIN NAME
+</h1>
+
+
+<a href="index.html" class="back">
+← zurück
+</a>
+
+
+</header>
+
+
+
+
+<main class="gallery-page">
+
+
+<h2 id="project-title" class="gallery-title">
+Projekt
+</h2>
+
+
+
+<section class="gallery">
+
+
+<img src="https://via.placeholder.com/1200x800">
+<img src="https://via.placeholder.com/1200x800">
+<img src="https://via.placeholder.com/1200x800">
+<img src="https://via.placeholder.com/1200x800">
+
+
+</section>
+
+
+</main>
+
+
+
+<script>
+
+
+const params =
+new URLSearchParams(window.location.search);
+
+
+const name =
+params.get("name");
+
+
+if(name){
+
+document.getElementById("project-title").innerHTML=name;
+
+document.title=name;
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
