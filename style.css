@@ -1,0 +1,253 @@
+/* Grundlayout */
+
+body {
+
+margin:0;
+
+background:white;
+
+color:black;
+
+font-family:
+Helvetica,
+Arial,
+sans-serif;
+
+overflow-x:hidden;
+
+}
+
+
+
+/* Künstlername */
+
+.artist-name {
+
+position:fixed;
+
+top:30px;
+
+left:40px;
+
+font-size:32px;
+
+font-weight:400;
+
+letter-spacing:-1px;
+
+z-index:10;
+
+}
+
+
+
+/* Projektliste */
+
+.project-container {
+
+padding-top:120px;
+
+}
+
+
+
+.project {
+
+
+display:block;
+
+font-size:clamp(40px,8vw,120px);
+
+font-weight:300;
+
+text-decoration:none;
+
+color:black;
+
+white-space:nowrap;
+
+margin:20px 0;
+
+
+animation:
+moveText
+18s linear infinite;
+
+
+}
+
+
+
+/*
+Jede zweite Zeile bewegt sich andersherum
+*/
+
+.project:nth-child(even){
+
+animation-direction:reverse;
+
+}
+
+
+
+/*
+Animation horizontal
+*/
+
+@keyframes moveText {
+
+
+from {
+
+transform:translateX(-20%);
+
+}
+
+
+to {
+
+transform:translateX(100%);
+
+}
+
+
+}
+
+
+
+/*
+Maus stoppt Bewegung
+*/
+
+.project:hover {
+
+animation-play-state:paused;
+
+}
+
+
+
+/*
+Projekt Galerie
+*/
+
+
+.gallery-page {
+
+padding-top:120px;
+
+}
+
+
+
+.back {
+
+position:fixed;
+
+top:35px;
+
+right:40px;
+
+text-decoration:none;
+
+color:black;
+
+font-size:16px;
+
+}
+
+
+
+.gallery-title {
+
+font-size:60px;
+
+font-weight:300;
+
+margin-left:40px;
+
+}
+
+
+
+.gallery {
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:40px;
+
+padding:40px;
+
+}
+
+
+
+.gallery img {
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+}
+
+
+
+/*
+Mobile Anpassung
+*/
+
+
+@media(max-width:700px){
+
+
+.artist-name {
+
+left:20px;
+
+top:20px;
+
+font-size:24px;
+
+}
+
+
+.project-container {
+
+padding-top:90px;
+
+}
+
+
+.project {
+
+font-size:45px;
+
+margin:30px 0;
+
+}
+
+
+
+.gallery {
+
+padding:20px;
+
+}
+
+
+.gallery-title {
+
+margin-left:20px;
+
+font-size:40px;
+
+}
+
+
+}
