@@ -217,6 +217,34 @@ cursor:zoom-out;
 transform:none;
 
 }
+
+.zoom-lens{
+
+position:fixed;
+
+width:320px;
+
+height:320px;
+
+border-radius:50%;
+
+overflow:hidden;
+
+pointer-events:none;
+
+display:none;
+
+border:2px solid rgba(255,255,255,.9);
+
+box-shadow:0 12px 40px rgba(0,0,0,.35);
+
+background-repeat:no-repeat;
+
+background-color:white;
+
+z-index:9999;
+
+}
 /* CV */
 
 
