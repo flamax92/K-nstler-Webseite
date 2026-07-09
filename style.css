@@ -158,30 +158,18 @@ transform:translateX(100vw);
 }
 
 
-
-/* Galerie */
-
-/* =====================================
-   Projektgalerie
+  Galerie
 ===================================== */
-.gallery-body{
 
-background:white;
-
-overflow-x:hidden;
-
-overflow-y:auto;
-
-}
 .gallery{
 
 width:100%;
 
-max-width:1600px;
+max-width:1700px;
 
 margin:0 auto;
 
-padding:120px 60px 100px;
+padding:100px 60px;
 
 display:flex;
 
@@ -191,7 +179,6 @@ gap:140px;
 
 }
 
-
 .gallery img{
 
 display:block;
@@ -200,30 +187,36 @@ width:100%;
 
 height:auto;
 
-max-height:90vh;
+max-height:92vh;
 
 object-fit:contain;
 
-margin:0 auto;
-   
 cursor:zoom-in;
 
-transition:transform .35s ease;
+user-select:none;
 
-transform-origin:center center;
-
-}
+transition:filter .25s ease;
 
 }
-
 
 .gallery img:hover{
 
-transform:scale(1.01);
+filter:brightness(1.03);
 
 }
 
 
+/* ===========================
+   Zoom
+=========================== */
+
+.gallery img.zooming{
+
+cursor:zoom-out;
+
+transform:none;
+
+}
 /* CV */
 
 
