@@ -6,10 +6,10 @@ const projects = {
     "dance-for-increasing-distances": {
         title: "Dance for Increasing Distances",
         hero: [
-            "images/dance for increasing distances_1.jpg",
-            "images/dance for increasing distances_2.jpg",
-            "images/dance for increasing distances_3.jpg",
-            "images/dance for increasing distances_4.jpg"
+            "images/SLID1.jpg",
+            "images/SLID2.jpg",
+            "images/SLID3.jpg",
+            "images/SLID4.jpg",
         ],
         gallery: [
             "images/dance for increasing distances_1.jpg",
