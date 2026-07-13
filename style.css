@@ -163,13 +163,18 @@ transform:translateX(100vw);
 .gallery{
 
 width:100%;
+
 max-width:1700px;
-margin:auto;
-padding:100px 60px;
+
+margin:0 auto;
+
+padding:60px 40px;
 
 display:flex;
+
 flex-direction:column;
-gap:140px;
+
+gap:80px;
 
 }
 
@@ -177,15 +182,18 @@ gap:140px;
 .gallery img{
 
 width:100%;
+
 height:auto;
 
-max-height:92vh;
+max-height:none;
 
 object-fit:contain;
 
 display:block;
 
 }
+
+
 .project-slider{
 
 position:relative;
