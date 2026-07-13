@@ -269,7 +269,6 @@ font-weight:300;
 
 @media(max-width:700px){
 
-
 .artist-name{
 
 top:20px;
@@ -281,18 +280,18 @@ font-size:24px;
 }
 
 
-.project{
+.gallery{
 
-font-size:45px;
+padding:40px 15px;
+
+gap:50px;
 
 }
 
 
-.gallery-title{
+.project-slider{
 
-margin-left:20px;
-
-font-size:40px;
+height:60vh;
 
 }
 
