@@ -24,8 +24,12 @@ const projects = {
     "port-de-bras": {
         title: "Port de Bras",
         hero: [
-            "images/port de bras1.jpg",
-            "images/port de bras2.jpg"
+            "images/SLPD1.jpg",
+            "images/SLPD2.jpg",
+            "images/SLPD3.jpg",
+            "images/SLPD4.jpg",
+            "images/SLPD5.jpg",
+            "images/SLPD6.jpg"
         ],
         gallery: [
             "images/port de bras1.jpg",
