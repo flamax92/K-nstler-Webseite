@@ -1,120 +1,119 @@
 const params = new URLSearchParams(location.search);
 const slug = params.get("project");
 
-// Zentrale Objektdatenbank mit allen Bildpfaden für Slideshow (hero) und Galerie (gallery)
+// Zentrale Objektdatenbank mit Bildpfaden und optionalen Werkangaben (captions)
 const projects = {
     "dance-for-increasing-distances": {
         title: "Dance for Increasing Distances",
         hero: [
-            "images/SLID1.jpg",
-            "images/SLID2.jpg",
-            "images/SLID3.jpg",
-            "images/SLID4.jpg",
+            { src: "images/SLID1.jpg", caption: "" },
+            { src: "images/SLID2.jpg", caption: "" },
+            { src: "images/SLID3.jpg", caption: "" },
+            { src: "images/SLID4.jpg", caption: "" }
         ],
         gallery: [
-            "images/dance for increasing distances_1.jpg",
-            "images/dance for increasing distances_2.jpg",
-            "images/dance for increasing distances_3.jpg",
-            "images/dance for increasing distances_4.jpg",
-            "images/dance for increasing distances_5.jpg",
-            "images/dance for increasing distances_6.jpg",
-            "images/dance for increasing distances_7.jpg"
+            { src: "images/dance for increasing distances_1.jpg", caption: "Werkangabe hier eintragen" },
+            { src: "images/dance for increasing distances_2.jpg", caption: "" },
+            { src: "images/dance for increasing distances_3.jpg", caption: "" },
+            { src: "images/dance for increasing distances_4.jpg", caption: "" },
+            { src: "images/dance for increasing distances_5.jpg", caption: "" },
+            { src: "images/dance for increasing distances_6.jpg", caption: "" },
+            { src: "images/dance for increasing distances_7.jpg", caption: "" }
         ]
     },
     "port-de-bras": {
         title: "Port de Bras",
         hero: [
-            "images/SLPD1.jpg",
-            "images/SLPD2.jpg",
-            "images/SLPD3.jpg",
-            "images/SLPD4.jpg",
-            "images/SLPD5.jpg",
-            "images/SLPD6.jpg"
+            { src: "images/SLPD1.jpg", caption: "" },
+            { src: "images/SLPD2.jpg", caption: "" },
+            { src: "images/SLPD3.jpg", caption: "" },
+            { src: "images/SLPD4.jpg", caption: "" },
+            { src: "images/SLPD5.jpg", caption: "" },
+            { src: "images/SLPD6.jpg", caption: "" }
         ],
         gallery: [
-            "images/port de bras1.jpg",
-            "images/port de bras2.jpg",
-            "images/port de bras3.jpg",
-            "images/port de bras4.jpg",
-            "images/port de bras5.jpg",
-            "images/port de bras6.jpg",
-            "images/port de bras7.jpg"
+            { src: "images/port de bras1.jpg", caption: "" },
+            { src: "images/port de bras2.jpg", caption: "" },
+            { src: "images/port de bras3.jpg", caption: "" },
+            { src: "images/port de bras4.jpg", caption: "" },
+            { src: "images/port de bras5.jpg", caption: "" },
+            { src: "images/port de bras6.jpg", caption: "" },
+            { src: "images/port de bras7.jpg", caption: "" }
         ]
     },
     "departure-of-the-funny-ones": {
         title: "Departure of the Funny Ones",
         hero: [
-            "images/departure of the funny ones1.jpg",
-            "images/departure of the funny ones2.jpg"
+            { src: "images/departure of the funny ones1.jpg", caption: "" },
+            { src: "images/departure of the funny ones2.jpg", caption: "" }
         ],
         gallery: [
-            "images/departure of the funny ones1.jpg",
-            "images/departure of the funny ones2.jpg",
-            "images/departure of the funny ones3.jpg",
-            "images/departure of the funny ones4.jpg",
-            "images/departure of the funny ones5.jpg"
+            { src: "images/departure of the funny ones1.jpg", caption: "" },
+            { src: "images/departure of the funny ones2.jpg", caption: "" },
+            { src: "images/departure of the funny ones3.jpg", caption: "" },
+            { src: "images/departure of the funny ones4.jpg", caption: "" },
+            { src: "images/departure of the funny ones5.jpg", caption: "" }
         ]
     },
     "something-to-dress-my-breath": {
         title: "Something to Dress My Breath", 
         hero: [
-             "images/something to dress my breath1.jpg",
-            "images/something to dress my breath2.jpg",
-            "images/something to dress my breath3.jpg",
-            "images/something to dress my breath4.jpg",
+            { src: "images/something to dress my breath1.jpg", caption: "" },
+            { src: "images/something to dress my breath2.jpg", caption: "" },
+            { src: "images/something to dress my breath3.jpg", caption: "" },
+            { src: "images/something to dress my breath4.jpg", caption: "" }
         ], 
-    
         gallery: [
-            "images/something to dress my breath1.jpg",
-            "images/something to dress my breath2.jpg",
-            "images/something to dress my breath3.jpg",
-            "images/something to dress my breath4.jpg",
-            "images/something to dress my breath5.jpg",
-            "images/something to dress my breath6.jpg",
-            "images/something to dress my breath7.jpg"
-            
-        ] },
+            { src: "images/something to dress my breath1.jpg", caption: "" },
+            { src: "images/something to dress my breath2.jpg", caption: "" },
+            { src: "images/something to dress my breath3.jpg", caption: "" },
+            { src: "images/something to dress my breath4.jpg", caption: "" },
+            { src: "images/something to dress my breath5.jpg", caption: "" },
+            { src: "images/something to dress my breath6.jpg", caption: "" },
+            { src: "images/something to dress my breath7.jpg", caption: "" }
+        ] 
+    },
     "eingesessen": { 
         title: "Eingesessen", 
-        hero: [
-            
-        ], 
+        hero: [], 
         gallery: [
-            "images/eingesessen1.jpg",
-            "images/eingesessen2.jpg",
-            "images/eingesessen3.jpg"
-        ] },
+            { src: "images/eingesessen1.jpg", caption: "" },
+            { src: "images/eingesessen2.jpg", caption: "" },
+            { src: "images/eingesessen3.jpg", caption: "" }
+        ] 
+    },
     "love-artefacts": { 
         title: "Love Artefacts", 
         hero: [
-           "images/Love1.jpg", 
-            "images/Love2.jpg", 
-            "images/Love3.jpg", 
-            "images/Love4.jpg", 
-            "images/Love5.jpg"
+            { src: "images/Love1.jpg", caption: "" }, 
+            { src: "images/Love2.jpg", caption: "" }, 
+            { src: "images/Love3.jpg", caption: "" }, 
+            { src: "images/Love4.jpg", caption: "" }, 
+            { src: "images/Love5.jpg", caption: "" }
         ], 
         gallery: [
-             "images/Love1.jpg", 
-            "images/Love2.jpg", 
-            "images/Love3.jpg", 
-            "images/Love4.jpg", 
-            "images/Love5.jpg"
-        ] },
+            { src: "images/Love1.jpg", caption: "" }, 
+            { src: "images/Love2.jpg", caption: "" }, 
+            { src: "images/Love3.jpg", caption: "" }, 
+            { src: "images/Love4.jpg", caption: "" }, 
+            { src: "images/Love5.jpg", caption: "" }
+        ] 
+    },
     "fare-thee-well": { 
         title: "Fare Thee Well", 
         hero: [
-            "images/FTW1.jpg", 
-            "images/FTW2.jpg", 
-            "images/FTW3.jpg", 
-            "images/FTW4.jpg",
+            { src: "images/FTW1.jpg", caption: "" }, 
+            { src: "images/FTW2.jpg", caption: "" }, 
+            { src: "images/FTW3.jpg", caption: "" }, 
+            { src: "images/FTW4.jpg", caption: "" }
         ], 
         gallery: [
-                    "images/FTW1.jpg", 
-            "images/FTW2.jpg", 
-            "images/FTW3.jpg", 
-            "images/FTW4.jpg"
-            
-        ] }
+            { src: "images/FTW1.jpg", caption: "" }, 
+            { src: "images/FTW2.jpg", caption: "" }, 
+            { src: "images/FTW3.jpg", caption: "" }, 
+            { src: "images/FTW4.jpg", caption: "" }
+        ] 
+    }
 };
 
 const project = projects[slug];
@@ -128,16 +127,25 @@ if (project) {
 
     // 2. Slideshow (Hero) Bilder generieren
     if (project.hero && project.hero.length > 0) {
-        project.hero.forEach((src, index) => {
+        project.hero.forEach((item, index) => {
             const div = document.createElement("div");
             div.className = "slide";
             if (index === 0) {
                 div.classList.add("active");
             }
             const img = document.createElement("img");
-            img.src = src;
+            img.src = item.src;
             img.alt = project.title;
             div.appendChild(img);
+
+            // Slideshow-Unterschrift rendern (falls vorhanden)
+            if (item.caption) {
+                const captionDiv = document.createElement("div");
+                captionDiv.className = "slide-caption";
+                captionDiv.textContent = item.caption;
+                div.appendChild(captionDiv);
+            }
+
             sliderContainer.appendChild(div);
         });
 
@@ -147,13 +155,27 @@ if (project) {
         sliderContainer.style.display = "none";
     }
 
-    // 3. Galerie Bilder generieren (Standardmäßig ohne Zoom-Logik)
+    // 3. Galerie-Bilder (unten) mit Unterschriften-Wrapper generieren
     if (project.gallery && project.gallery.length > 0) {
-        project.gallery.forEach(src => {
+        project.gallery.forEach(item => {
+            // Wir erstellen ein umschließendes Element pro Galerie-Bild
+            const wrapper = document.createElement("div");
+            wrapper.className = "gallery-item";
+
             const img = document.createElement("img");
-            img.src = src;
+            img.src = item.src;
             img.alt = project.title;
-            galleryContainer.appendChild(img);
+            wrapper.appendChild(img);
+
+            // Werkangabe rendern (falls vorhanden)
+            if (item.caption) {
+                const caption = document.createElement("p");
+                caption.className = "image-caption";
+                caption.textContent = item.caption;
+                wrapper.appendChild(caption);
+            }
+
+            galleryContainer.appendChild(wrapper);
         });
     }
 } else {
