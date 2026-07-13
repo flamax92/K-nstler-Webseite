@@ -167,12 +167,13 @@ body{
 
 /* Stil für die Werkangaben unter dem Galeriebild */
 .image-caption {
-    margin: 12px 0 0 0;
-    font-size: 14px;
-    color: #666666; /* Dezentes Grau */
-    font-style: italic; /* Kursiv wirkt bei Werkangaben sehr elegant */
-    line-height: 1.5;
+    margin: 15px 0 0 0;
+    font-size: 13px; /* Etwas kleiner & dezenter für edlere Ästhetik */
+    color: #666666; /* Feines Grau */
+    line-height: 1.6;
     font-family: Helvetica, Arial, sans-serif;
+    white-space: pre-line; /* WICHTIG: Behält die Zeilenumbrüche aus der Datenbank bei! */
+    letter-spacing: 0.02em; /* Minimal feinerer Zeichenabstand */
 }
 
 /* CV */
