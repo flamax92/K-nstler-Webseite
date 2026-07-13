@@ -14,7 +14,7 @@ hero:[
 
 "images/dance-for-increasing-distances/hero3.jpg"
 
-],
+]
 
 
 gallery:[
@@ -25,7 +25,7 @@ gallery:[
 
 ]
 
-},
+}
 
 
 
@@ -39,7 +39,7 @@ hero:[
 
 "images/port-de-bras/hero2.jpg"
 
-],
+]
 
 
 gallery:[
@@ -77,7 +77,7 @@ div.innerHTML=
 slider.appendChild(div);
 
 
-});
+})
 
 
 let slides=document.querySelectorAll(".slide");
@@ -114,4 +114,4 @@ img.alt=project.title;
 gallery.appendChild(img);
 
 
-});
+})
