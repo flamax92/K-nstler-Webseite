@@ -100,12 +100,19 @@ const projects = {
             "images/Love4.jpg", 
             "images/Love5.jpg"
         ] },
-    "fare-well": { 
-        title: "Fare Well", 
+    "fare-thee-well": { 
+        title: "Fare Thee Well", 
         hero: [
-            
+            "images/FTW1.jpg", 
+            "images/FTW2.jpg", 
+            "images/FTW3.jpg", 
+            "images/FTW4.jpg",
         ], 
         gallery: [
+                    "images/FTW1.jpg", 
+            "images/FTW2.jpg", 
+            "images/FTW3.jpg", 
+            "images/FTW4.jpg"
             
         ] }
 };
