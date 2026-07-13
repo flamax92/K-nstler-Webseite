@@ -160,50 +160,32 @@ transform:translateX(100vw);
 
   Galerie
 ===================================== */
-
 .gallery{
 
 width:100%;
-
 max-width:1700px;
-
-margin:0 auto;
-
+margin:auto;
 padding:100px 60px;
 
 display:flex;
-
 flex-direction:column;
-
 gap:140px;
 
 }
 
+
 .gallery img{
 
-display:block;
-
 width:100%;
-
 height:auto;
 
 max-height:92vh;
 
 object-fit:contain;
 
-cursor:zoom-in;
-
-user-select:none;
-
-transition:filter .25s ease;
+display:block;
 
 }
-
-.gallery img:hover{
-
-filter:brightness(1.03);
-
-
 }
 /* CV */
 
