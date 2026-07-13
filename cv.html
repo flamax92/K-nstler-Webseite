@@ -1,98 +1,166 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | maximilian flachsenberg</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Spezifische Optimierungen für die CV-Seite */
+        .cv-content h3 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
 
-<meta charset="UTF-8">
+        .statement-text {
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        /* Saubere Tabellen-Struktur für die Ausstellungen */
+        .cv-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-<title>CV | maximilian flachsenberg</title>
+        .cv-table tr {
+            border-bottom: 1px solid #f0f0f0;
+        }
 
+        .cv-table tr:last-child {
+            border-bottom: none;
+        }
 
-<link rel="stylesheet" href="style.css">
+        .cv-table td {
+            padding: 15px 0;
+            vertical-align: top;
+        }
 
+        /* Spalte für die Datumsangaben */
+        .cell-date {
+            width: 220px;
+            font-weight: bold;
+            color: #555;
+            padding-right: 20px !important;
+        }
+
+        /* Spalte für Titel und Ort */
+        .cell-details {
+            line-height: 1.6;
+        }
+
+        .exhibition-title {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .exhibition-location {
+            color: #666;
+            font-size: 20px; /* Leicht kleiner für eine schöne Hierarchie */
+        }
+
+        /* Mobile Anpassung für die Tabelle */
+        @media(max-width: 700px) {
+            .cv-table tr {
+                display: flex;
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            .cv-table td {
+                padding: 0;
+                width: 100%;
+            }
+            .cell-date {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 </head>
-
-
 
 <body class="cv-page">
 
+    <header class="project-header">
+        <h1 class="artist-name-project">maximilian flachsenberg</h1>
+        <a href="index.html" class="back">← zurück</a>
+    </header>
 
-<h1 class="artist-name">
-DEIN NAME
-</h1>
+    <main class="cv-content">
+        <h2>CV</h2>
 
+        <h3>Artist Statement</h3>
+        <p class="statement-text">
+            Maximilian Flachsenberg studierte an der Muthesius Kunsthochschule in Kiel mit dem Schwerpunkt Bildhauerei 
+            und schloss sein Studium 2024 mit dem Master of Fine Arts ab. Seine Installationen und Druckgrafiken kreisen 
+            um die kleinen und großen Abschiede des Alltags. Verdrängte Orte und Figuren rückt er dabei ins Zentrum und 
+            überzeichnet diese, bis das schmerzvoll Melancholische ins kurios Absurde kippt. Maximilian Flachsenberg lebt 
+            und arbeitet in Kiel und ist derzeit Stipendiat des Anscharpark Atelierstipendiums.
+        </p>
 
-<a href="index.html" class="back">
-← zurück
-</a>
-
-
-
-<main class="cv-content">
-
-
-<h2>
-CV
-</h2>
-
-
-<p>
-artist statement<br>
-Maximilian Flachsenberg studierte an der Muthesius Kunsthochschule in Kiel mit dem Schwerpunkt Bildhauerei<br>
-und schloss sein Studium 2024 mit dem Master of Fine Arts ab. Seine Installationen und Druckgrafiken kreisen<br>
-um die kleinen und großen Abschiede des Alltags. Verdrängte Orte und Figuren rückt er dabei ins Zentrum und <br>
-überzeichnet diese, bis das schmerzvoll Melancholische ins kurios Absurde kippt. Maximilian Flachsenberg lebt<br>
-und arbeitet in Kiel und ist derzeit Stipendiat des Anscharpark Atelierstipendiums.
-</p>
-
-
-<p>
-Ausstellungen<br>
-07.06. - 07.09.2026		Parasite.TROPEZ;
-				im Sommerbad Humboldthain
-				Wiesenstraße 1, 13357 Berlin
-</p>
-<p>
-18.09. - 30.09.2024		"Schwäne, Igel und Kamele"
-				Stadtgalerie, Kiel
-</p>
-<p>
-05.07. -- 13.07.2024		"Sundays"
-				Frappant Galerie, Hamburg 
-</p>
-<p>
-03.07. - 08.07.2024		"Dance for Increasing Distances"
-				spce, Kiel 
-</p>
-<p>
-13.06. - 01.10.2023		„Homosexuelle Männer im Lagerkomplex Ravensbrück“
-				Mahn- und Gedenkstätte Ravensbrück
-</p>
-<p>
-17.03. - 22.03.2022 		Am Fluss 
-				KunstraumB, Wilhelminenstraße 35; Kiel
-</p>
-<p>
-03.02. - 06.03.2022		verEINE*N
-				xpon-art, Repsoldstraße 45, Hamburg 
-</p>
-<p>
-12.11. - 13.11.2021		feinstes häusergemachtes eis
-				UDK Berlin, Hardenbergstraße 33, Berlin
-
-</p>
-
-
-
-
-</main>
-
+        <h3>Ausstellungen</h3>
+        <table class="cv-table">
+            <tr>
+                <td class="cell-date">07.06. – 07.09.2026</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">Parasite.TROPEZ</span><br>
+                    <span class="exhibition-location">im Sommerbad Humboldthain, Wiesenstraße 1, 13357 Berlin</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-date">18.09. – 30.09.2024</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">"Schwäne, Igel und Kamele"</span><br>
+                    <span class="exhibition-location">Stadtgalerie, Kiel</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-date">05.07. – 13.07.2024</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">"Sundays"</span><br>
+                    <span class="exhibition-location">Frappant Galerie, Hamburg</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-date">03.07. – 08.07.2024</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">"Dance for Increasing Distances"</span><br>
+                    <span class="exhibition-location">spce, Kiel</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-date">13.06. – 01.10.2023</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">„Homosexuelle Männer im Lagerkomplex Ravensbrück“</span><br>
+                    <span class="exhibition-location">Mahn- und Gedenkstätte Ravensbrück</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-date">17.03. – 22.03.2022</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">Am Fluss</span><br>
+                    <span class="exhibition-location">KunstraumB, Wilhelminenstraße 35, Kiel</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-date">03.02. – 06.03.2022</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">verEINE*N</span><br>
+                    <span class="exhibition-location">xpon-art, Repsoldstraße 45, Hamburg</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-date">12.11. – 13.11.2021</td>
+                <td class="cell-details">
+                    <span class="exhibition-title">feinstes häusergemachtes eis</span><br>
+                    <span class="exhibition-location">UDK Berlin, Hardenbergstraße 33, Berlin</span>
+                </td>
+            </tr>
+        </table>
+    </main>
 
 </body>
-
-
 </html>
