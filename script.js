@@ -12,13 +12,27 @@ const projects = {
             { src: "images/SLID4.jpg", caption: "" }
         ],
         gallery: [
-            { src: "images/dance for increasing distances_1.jpg", caption: "Werkangabe hier eintragen" },
-            { src: "images/dance for increasing distances_2.jpg", caption: "" },
-            { src: "images/dance for increasing distances_3.jpg", caption: "" },
-            { src: "images/dance for increasing distances_4.jpg", caption: "" },
-            { src: "images/dance for increasing distances_5.jpg", caption: "" },
-            { src: "images/dance for increasing distances_6.jpg", caption: "" },
-            { src: "images/dance for increasing distances_7.jpg", caption: "" }
+            { src: "images/dance for increasing distances_1.jpg", caption: `Dance For Increasing Distances, 2024
+PVC-Folie, Öl-Farbe, Eisenware, Keramik
+Alte Muthesius, Kiel` },
+            { src: "images/dance for increasing distances_2.jpg", caption: `Dance For Increasing Distances, 2024
+PVC-Folie, Öl-Farbe, Eisenware, Keramik
+Alte Muthesius, Kiel` },
+            { src: "images/dance for increasing distances_3.jpg", caption: `Dance For Increasing Distances, 2024
+PVC-Folie, Öl-Farbe, Eisenware, Keramik
+Alte Muthesius, Kiel` },
+            { src: "images/dance for increasing distances_4.jpg", caption: `Dance For Increasing Distances, 2024
+PVC-Folie, Öl-Farbe, Eisenware, Keramik
+Alte Muthesius, Kiel` },
+            { src: "images/dance for increasing distances_5.jpg", caption: `Dance For Increasing Distances, 2024
+PVC-Folie, Öl-Farbe, Eisenware, Keramik
+Alte Muthesius, Kiel` },
+            { src: "images/dance for increasing distances_6.jpg", caption: `Dance For Increasing Distances, 2024
+PVC-Folie, Öl-Farbe, Eisenware, Keramik
+Alte Muthesius, Kiel` },
+            { src: "images/dance for increasing distances_7.jpg", caption: `Dance For Increasing Distances, 2024
+PVC-Folie, Öl-Farbe, Eisenware, Keramik
+Alte Muthesius, Kiel` }
         ]
     },
     "port-de-bras": {
@@ -32,13 +46,35 @@ const projects = {
             { src: "images/SLPD6.jpg", caption: "" }
         ],
         gallery: [
-            { src: "images/port de bras1.jpg", caption: "" },
-            { src: "images/port de bras2.jpg", caption: "" },
-            { src: "images/port de bras3.jpg", caption: "" },
-            { src: "images/port de bras4.jpg", caption: "" },
-            { src: "images/port de bras5.jpg", caption: "" },
-            { src: "images/port de bras6.jpg", caption: "" },
-            { src: "images/port de bras7.jpg", caption: "" }
+            { src: "images/port de bras1.jpg", 
+              caption: `Port de Bras, 2024 
+(in Zusammenarbeit mit Alvar Bohrmann) 
+Fotografie: Mateusz Dworczyk
+Watte, Frottee, Keramik, Draht` },
+            { src: "images/port de bras2.jpg", caption: `Port de Bras, 2024 
+(in Zusammenarbeit mit Alvar Bohrmann) 
+Fotografie: Mateusz Dworczyk
+Watte, Frottee, Keramik, Draht` },
+            { src: "images/port de bras3.jpg", caption: `Port de Bras, 2024 
+(in Zusammenarbeit mit Alvar Bohrmann) 
+Fotografie: Mateusz Dworczyk
+Watte, Frottee, Keramik, Draht` },
+            { src: "images/port de bras4.jpg", caption: `Port de Bras, 2024 
+(in Zusammenarbeit mit Alvar Bohrmann) 
+Fotografie: Mateusz Dworczyk
+Watte, Frottee, Keramik, Draht` },
+            { src: "images/port de bras5.jpg", caption: `Port de Bras, 2024 
+(in Zusammenarbeit mit Alvar Bohrmann) 
+Fotografie: Mateusz Dworczyk
+Watte, Frottee, Keramik, Draht` },
+            { src: "images/port de bras6.jpg", caption: `Port de Bras, 2024 
+(in Zusammenarbeit mit Alvar Bohrmann) 
+Fotografie: Mateusz Dworczyk
+Watte, Frottee, Keramik, Draht` },
+            { src: "images/port de bras7.jpg", caption: `Port de Bras, 2024 
+(in Zusammenarbeit mit Alvar Bohrmann) 
+Fotografie: Mateusz Dworczyk
+Watte, Frottee, Keramik, Draht` }
         ]
     },
     "departure-of-the-funny-ones": {
@@ -48,11 +84,21 @@ const projects = {
             { src: "images/departure of the funny ones2.jpg", caption: "" }
         ],
         gallery: [
-            { src: "images/departure of the funny ones1.jpg", caption: "" },
-            { src: "images/departure of the funny ones2.jpg", caption: "" },
-            { src: "images/departure of the funny ones3.jpg", caption: "" },
-            { src: "images/departure of the funny ones4.jpg", caption: "" },
-            { src: "images/departure of the funny ones5.jpg", caption: "" }
+            { src: "images/departure of the funny ones1.jpg", caption: `Departure Of The Funny Ones, 2024
+Fotografie: Monika Martinez de las Rivas
+PVC-Folie, Frottierstoff, Keramik` },
+            { src: "images/departure of the funny ones2.jpg", caption: `Departure Of The Funny Ones, 2024
+Fotografie: Monika Martinez de las Rivas
+PVC-Folie, Frottierstoff, Keramik` },
+            { src: "images/departure of the funny ones3.jpg", caption: `Departure Of The Funny Ones, 2024
+Fotografie: Monika Martinez de las Rivas
+PVC-Folie, Frottierstoff, Keramik` },
+            { src: "images/departure of the funny ones4.jpg", caption: `Departure Of The Funny Ones, 2024
+Fotografie: Monika Martinez de las Rivas
+PVC-Folie, Frottierstoff, Keramik` },
+            { src: "images/departure of the funny ones5.jpg", caption: `Departure Of The Funny Ones, 2024
+Fotografie: Monika Martinez de las Rivas
+PVC-Folie, Frottierstoff, Keramik` }
         ]
     },
     "something-to-dress-my-breath": {
@@ -121,14 +167,13 @@ const titleElement = document.getElementById("project-title");
 const sliderContainer = document.getElementById("slider");
 const galleryContainer = document.getElementById("gallery");
 
-// NEU: Den Künstlernamen auf der Projektseite anklickbar machen und zur Startseite verlinken
+// Den Künstlernamen auf der Projektseite anklickbar machen und zur Startseite verlinken
 const artistNameElement = document.querySelector(".artist-name-project");
 if (artistNameElement) {
     artistNameElement.innerHTML = `<a href="index.html" style="color: inherit; text-decoration: none;">maximilian flachsenberg</a>`;
 }
 
 if (project) {
-    // 1. Titel setzen
     titleElement.textContent = project.title;
 
     // 2. Slideshow (Hero) Bilder generieren
@@ -144,7 +189,6 @@ if (project) {
             img.alt = project.title;
             div.appendChild(img);
 
-            // Slideshow-Unterschrift rendern (falls vorhanden)
             if (item.caption) {
                 const captionDiv = document.createElement("div");
                 captionDiv.className = "slide-caption";
@@ -155,7 +199,6 @@ if (project) {
             sliderContainer.appendChild(div);
         });
 
-        // Slideshow automatischen Wechsel aktivieren (alle 2 Sekunden)
         startSlideshow();
     } else {
         sliderContainer.style.display = "none";
@@ -172,7 +215,6 @@ if (project) {
             img.alt = project.title;
             wrapper.appendChild(img);
 
-            // Werkangabe rendern (falls vorhanden)
             if (item.caption) {
                 const caption = document.createElement("p");
                 caption.className = "image-caption";
@@ -187,7 +229,6 @@ if (project) {
     if (titleElement) titleElement.textContent = "Projekt nicht gefunden";
 }
 
-// Funktion für den automatischen Bildwechsel (2 Sekunden Intervall)
 function startSlideshow() {
     const slides = document.querySelectorAll(".slide");
     if (slides.length <= 1) return;
@@ -197,5 +238,5 @@ function startSlideshow() {
         slides[current].classList.remove("active");
         current = (current + 1) % slides.length;
         slides[current].classList.add("active");
-    }, 2000); // 2000ms = 2 Sekunden
+    }, 2000);
 }
