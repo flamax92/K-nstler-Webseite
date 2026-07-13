@@ -87,10 +87,18 @@ const projects = {
     "love-artefacts": { 
         title: "Love Artefacts", 
         hero: [
-            
+           "images/Love1.jpg", 
+            "images/Love2.jpg", 
+            "images/Love3.jpg", 
+            "images/Love4.jpg", 
+            "images/Love5.jpg"
         ], 
         gallery: [
-            
+             "images/Love1.jpg", 
+            "images/Love2.jpg", 
+            "images/Love3.jpg", 
+            "images/Love4.jpg", 
+            "images/Love5.jpg"
         ] },
     "fare-well": { title: "Fare Well", hero: [], gallery: [] }
 };
