@@ -100,7 +100,14 @@ const projects = {
             "images/Love4.jpg", 
             "images/Love5.jpg"
         ] },
-    "fare-well": { title: "Fare Well", hero: [], gallery: [] }
+    "fare-well": { 
+        title: "Fare Well", 
+        hero: [
+            
+        ], 
+        gallery: [
+            
+        ] }
 };
 
 const project = projects[slug];
