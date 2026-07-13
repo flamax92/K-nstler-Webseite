@@ -121,6 +121,12 @@ const titleElement = document.getElementById("project-title");
 const sliderContainer = document.getElementById("slider");
 const galleryContainer = document.getElementById("gallery");
 
+// NEU: Den Künstlernamen auf der Projektseite anklickbar machen und zur Startseite verlinken
+const artistNameElement = document.querySelector(".artist-name-project");
+if (artistNameElement) {
+    artistNameElement.innerHTML = `<a href="index.html" style="color: inherit; text-decoration: none;">maximilian flachsenberg</a>`;
+}
+
 if (project) {
     // 1. Titel setzen
     titleElement.textContent = project.title;
@@ -158,7 +164,6 @@ if (project) {
     // 3. Galerie-Bilder (unten) mit Unterschriften-Wrapper generieren
     if (project.gallery && project.gallery.length > 0) {
         project.gallery.forEach(item => {
-            // Wir erstellen ein umschließendes Element pro Galerie-Bild
             const wrapper = document.createElement("div");
             wrapper.className = "gallery-item";
 
