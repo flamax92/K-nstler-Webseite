@@ -58,7 +58,10 @@ const projects = {
     "something-to-dress-my-breath": {
         title: "Something to Dress My Breath", 
         hero: [
-            
+             "images/something to dress my breath1.jpg",
+            "images/something to dress my breath2.jpg",
+            "images/something to dress my breath3.jpg",
+            "images/something to dress my breath4.jpg",
         ], 
     
         gallery: [
