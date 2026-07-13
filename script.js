@@ -71,8 +71,24 @@ const projects = {
             "images/something to dress my breath7.jpg"
             
         ] },
-    "eingesessen": { title: "Eingesessen", hero: [], gallery: [] },
-    "love-artefacts": { title: "Love Artefacts", hero: [], gallery: [] },
+    "eingesessen": { 
+        title: "Eingesessen", 
+        hero: [
+            
+        ], 
+        gallery: [
+            "images/eingesessen1.jpg",
+            "images/eingesessen2.jpg",
+            "images/eingesessen3.jpg"
+        ] },
+    "love-artefacts": { 
+        title: "Love Artefacts", 
+        hero: [
+            
+        ], 
+        gallery: [
+            
+        ] },
     "fare-well": { title: "Fare Well", hero: [], gallery: [] }
 };
 
