@@ -55,7 +55,22 @@ const projects = {
             "images/departure of the funny ones5.jpg"
         ]
     },
-    "something-to-dress-my-breath": { title: "Something to Dress My Breath", hero: [], gallery: [] },
+    "something-to-dress-my-breath": {
+        title: "Something to Dress My Breath", 
+        hero: [
+            
+        ], 
+    
+        gallery: [
+            "images/something to dress my breath1.jpg",
+            "images/something to dress my breath2.jpg",
+            "images/something to dress my breath3.jpg",
+            "images/something to dress my breath4.jpg",
+            "images/something to dress my breath5.jpg",
+            "images/something to dress my breath6.jpg",
+            "images/something to dress my breath7.jpg"
+            
+        ] },
     "eingesessen": { title: "Eingesessen", hero: [], gallery: [] },
     "love-artefacts": { title: "Love Artefacts", hero: [], gallery: [] },
     "fare-well": { title: "Fare Well", hero: [], gallery: [] }
